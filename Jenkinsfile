@@ -11,6 +11,9 @@ pipeline{
 		stage('Build') {
 
 			steps {
+				sh 'ls -ls'
+				sh 'pwd'
+				sh 'sleep 30'
 				sh 'docker build -t hitesh25/jenkins_argo:latest .'
 			}
 		}
