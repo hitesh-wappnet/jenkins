@@ -17,7 +17,7 @@ spec:
         app: myargo
     spec:
       containers:
-      - image: hitesh25/argo:v5
+      - image: hitesh25/argo:v4
         name: argo
 
 ---
