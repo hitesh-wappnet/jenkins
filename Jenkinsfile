@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        PROJECT_PATH = env.BRANCH_NAME == 'development' ? '/home/ubuntu' : '/var/www/html'
+        PROJECT_PATH = "development"
     } 
     stages {
         stage('Stage 1') {
             steps {
-                echo 'Hello world! from Github Inside Hehe ${PROJECT_PATH}'  
+                echo 'I am from development :  ${PROJECT_PATH}'  
             }
         }
     
