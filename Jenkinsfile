@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage("branch-name"){
+            steps{
             echo "$env.BRANCH_NAME"
+            }
         }
         stage('Stage 1 - Development') {
             when {
