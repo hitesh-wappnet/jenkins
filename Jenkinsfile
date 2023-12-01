@@ -1,25 +1,3 @@
-@Library('deploymentLibrary') _
-pipeline {
-    agent any
-
-    stages {
-        stage("branch-name") {
-            steps {
-                echo "$env.BRANCH_NAME"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                deploy(env.BRANCH_NAME)
-            }
-        }
-    }
-}
-
-
-
-
-/* 
 pipeline {
     agent any
 
@@ -52,4 +30,3 @@ pipeline {
     
     }
 }
-*/
