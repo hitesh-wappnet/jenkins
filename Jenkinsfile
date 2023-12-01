@@ -1,9 +1,12 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+        PROJECT_PATH = "development"
+    } 
     stages {
         stage('Stage 1') {
             steps {
-                echo 'Hello world! from Github Inside Hehe'  
+                echo 'I am from development :  ${PROJECT_PATH}'  
             }
         }
     
