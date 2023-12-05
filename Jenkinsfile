@@ -2,15 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage("branch-name"){
-            steps{
-            echo "$env.BRANCH_NAME"
-            }
-        }
         stage('Stage 1 - Development') {
             when {
-              expression {
-                env.BRANCH_NAME == 'development' 
+		branch "development"
               }
             }
             steps {
@@ -19,9 +13,7 @@ pipeline {
         }
         stage('Stage 1 - Master') {
             when {
-              expression {
-                env.BRANCH_NAME == 'master' 
-              }
+          	branch "master"
             }
             steps {
                 echo 'I am from master'  
