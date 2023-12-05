@@ -1,6 +1,7 @@
 pipeline {
     agent any
-
+    triggers {
+    }
     stages {
         stage('Stage 1 - Development') {
             when {
